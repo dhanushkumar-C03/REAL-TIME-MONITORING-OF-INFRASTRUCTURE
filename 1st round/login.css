@@ -1,0 +1,72 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0c0c0c;
+}
+
+/* Container styling */
+.container {
+  width: 80%;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input box styling */
+.inputBox {
+  margin-bottom: 15px;
+}
+
+.inputBox input[type="email"],
+.inputBox input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.inputBox button {
+  background: #4caf50;
+  border: none;
+  position: center;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+.inputBox {
+  margin-bottom: 15px;
+  text-align: center; /* Align input boxes to the center */
+}
+
+.inputBox button:hover {
+  background: #45a049;
+}
+
+/* Styling for the signup link */
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

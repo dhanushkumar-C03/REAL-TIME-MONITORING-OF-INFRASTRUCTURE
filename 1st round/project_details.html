@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Details</title>
+    <link rel="stylesheet" href="project_detailS.css" />
+    <!-- Link to your external CSS file -->
+  </head>
+  <body>
+    <nav>
+      <img src="/image.jpg" alt="" />
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a
+              href="https://console.firebase.google.com/project/d-pic-9f564/authentication/users"
+              >User Authentication</a
+            >
+          </li>
+
+          <li><a href="project.html">Projects</a></li>
+
+          <li><a href="#">Mobile App</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="project-details">
+        <h1>Project Details</h1>
+        <div class="project-info">
+          <h2>Project Name: ABC Project</h2>
+          </div>
+          <br>
+          <p>Area: Anna nagar</p>
+          <br>
+          <p>Address:dindigul</p>
+           <br>
+          <p>site Engineer:Ram</p>
+           <br>
+          <p>site Engineer number:9876543210</p>
+         
+        </div>
+      </section>
+<br>
+<br>
+<br>
+      <section class="model-viewer">
+        <h2>3D Model Viewer</h2>
+        <div id="modelViewer">
+          <!-- Your 3D model viewer component goes here -->
+          <!-- Example: <iframe src="your_model_url" frameborder="0"></iframe> -->
+        </div>
+        <!-- Place this button wherever you want on your page -->
+        <button id="openNewPageBtn">Open view</button>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Your footer content -->
+    </footer>
+
+    <script src="project_detailS.js"></script>
+    <!-- Link to your external JavaScript file for 3D model handling -->
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-time Map Update</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    /* Add styles for the map container */
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="map-section">
+      <h2>Real-time Map Update</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    var map = L.map('map').setView([23.6102, 85.2799], 7); // Set initial coordinates and zoom level
+
+    // Add a tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(map);
+
+    // Function to update marker position (hypothetical example)
+    function updateMarkerPosition(lat, lng) {
+      // Clear previous marker
+      if (typeof marker !== 'undefined') {
+        map.removeLayer(marker);
+      }
+
+      // Update marker position
+      marker = L.marker([lat, lng]).addTo(map);
+      marker.bindPopup("<b>New Position</b><br>Lat: " + lat + ", Lng: " + lng).openPopup();
+    }
+
+    // Simulating real-time data update (example)
+    function simulateRealTimeUpdate() {
+      // Hypothetical new coordinates received in real-time
+      var newLat = 23.6102;
+      var newLng = 85.2799;
+
+      // Update the marker position with new coordinates
+      updateMarkerPosition(newLat, newLng);
+    }
+
+    // Simulate real-time update every 5 seconds (for demonstration purposes)
+    setInterval(simulateRealTimeUpdate, 5000); // Change this interval as needed
+  </script>
+</body>
+</html>

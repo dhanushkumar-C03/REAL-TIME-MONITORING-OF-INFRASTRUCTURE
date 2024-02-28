@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Details</title>
+    <link rel="stylesheet" href="project.css" />
+    <!-- Link to an external CSS file -->
+  </head>
+  <body>
+    <nav>
+      <img src="/image.jpg" alt="" />
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a
+              href="https://console.firebase.google.com/project/d-pic-9f564/authentication/users"
+              >User Authentication</a
+            >
+          </li>
+
+          <li><a href="project.html">Projects</a></li>
+
+          <li><a href="#">Mobile App</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Welcome to Project Details</h1>
+      <div class="projects">
+        <div class="project-card" onclick="goToProjectPage('Project 1')">
+          <h2>Project A</h2>
+          <p>Description of Project 1</p>
+        </div>
+        <div class="project-card" onclick="goToProjectPage('Project 2')">
+          <h2>Project B</h2>
+          <p>Description of Project 2</p>
+        </div>
+        <div class="project-card" onclick="goToProjectPage('Project 3')">
+          <h2>Project C</h2>
+          <p>Description of Project 3</p>
+        </div>
+        <div class="project-card" onclick="goToProjectPage('Project 4')">
+          <h2>Project D</h2>
+          <p>Description of Project 4</p>
+        </div>
+        <div class="project-card" onclick="goToProjectPage('Project 5')">
+          <h2>Project E</h2>
+          <p>Description of Project 5</p>
+        </div>
+        <div class="project-card" onclick="goToProjectPage('Project 6')">
+          <h2>Project F</h2>
+          <p>Description of Project 6</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function goToProjectPage(projectName) {
+        // Define your logic to navigate to different project pages here
+        // For demonstration purposes, this function alerts the selected project
+
+        // You can use window.location.href to redirect to different URLs based on the project name
+        window.location.href = "project_details.html"; // Redirect to Project 1 page
+      }
+    </script>
+  </body>
+</html>
